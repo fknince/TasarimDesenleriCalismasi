@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="NDAM_DECORATOR.jnlp">
+  <information>
+    <title>NDAM_DECORATOR</title>
+    <vendor>fince</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="NDAM_DECORATOR.jar" size="11940" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="NDAM_DECORATOR" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="ndam_decorator.NDAM_DECORATOR"  name="NDAM_DECORATOR" />
+  <update check="always"/>
+</jnlp>

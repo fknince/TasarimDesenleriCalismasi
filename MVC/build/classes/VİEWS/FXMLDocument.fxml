@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane_main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #009688;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VİEWS.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #E0F2F1;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Accordion fx:id="pane_acordion" layoutY="-1.0" prefHeight="480.0" prefWidth="240.0">
+              <panes>
+                <TitledPane fx:id="ucus_ekle_pane" animated="false" onMouseClicked="#ucus_ekle_paneTiklandi" text="Uçuş Ekle" textFill="#004d40">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="ucus_ekle_txtUcusNo" layoutX="11.0" layoutY="29.0" prefHeight="27.0" prefWidth="213.0" promptText="Uçuş No:" />
+                              <TextField fx:id="ucus_ekle_txtNerden" layoutX="11.0" layoutY="69.0" prefHeight="27.0" prefWidth="213.0" promptText="Nerden:" />
+                              <TextField fx:id="ucus_ekle_txtNereye" layoutX="11.0" layoutY="109.0" prefHeight="27.0" prefWidth="213.0" promptText="Nereye:" />
+                              <TextField fx:id="ucus_ekle_txtFiyat" layoutX="10.0" layoutY="149.0" prefHeight="27.0" prefWidth="213.0" promptText="Fiyat:" />
+                              <Button fx:id="ucus_ekle_BtnEkle" layoutX="100.0" layoutY="341.0" mnemonicParsing="false" onAction="#ekle_tiklandi" prefHeight="27.0" prefWidth="124.0" text="EKLE" textFill="#26a69a">
+                                 <font>
+                                    <Font name="Cambria Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <font>
+                        <Font name="Cambria Bold" size="13.0" />
+                     </font>
+                </TitledPane>
+                <TitledPane animated="false" text="Uçuş Ara" textFill="#004d3e">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="ucus_ara_BtnAra" layoutX="97.0" layoutY="343.0" mnemonicParsing="false" onAction="#ara_tiklandi" prefHeight="27.0" prefWidth="124.0" text="ARA" textFill="#26a69a">
+                                 <font>
+                                    <Font name="Cambria Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="ucus_ara_txtFiyat" layoutX="13.0" layoutY="138.0" prefHeight="27.0" prefWidth="213.0" promptText="Fiyat:" />
+                              <TextField fx:id="ucus_ara_txtNereye" layoutX="13.0" layoutY="98.0" prefHeight="27.0" prefWidth="213.0" promptText="Nereye:" />
+                              <TextField fx:id="ucus_ara_txtNerden" layoutX="13.0" layoutY="60.0" prefHeight="27.0" prefWidth="213.0" promptText="Nerden:" />
+                              <TextField fx:id="ucus_ara_txtUcusNo" layoutX="13.0" layoutY="21.0" prefHeight="27.0" prefWidth="213.0" promptText="Uçuş No:" />
+                              <RadioButton fx:id="radio_buyuk" layoutX="48.0" layoutY="180.0" mnemonicParsing="false" text="&gt;">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="grup1" />
+                                 </toggleGroup>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="radio_esit" layoutX="95.0" layoutY="180.0" mnemonicParsing="false" text="=" toggleGroup="$grup1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="radio_kucuk" layoutX="141.0" layoutY="180.0" mnemonicParsing="false" text="&lt;" toggleGroup="$grup1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </RadioButton>
+                              <Button fx:id="ucus_ara_BtnSfiirla" layoutX="97.0" layoutY="305.0" mnemonicParsing="false" onAction="#sifirla_tiklandi" prefHeight="27.0" prefWidth="124.0" text="SIFIRLA" textFill="#26a69a">
+                                 <font>
+                                    <Font name="Cambria Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <font>
+                        <Font name="Cambria Bold" size="13.0" />
+                     </font>
+                </TitledPane>
+                  <TitledPane fx:id="ucus_guncelle_pane" animated="false" onMouseClicked="#ucus_guncelle_paneTiklandi" text="Uçuş Güncelle" textFill="#004d40">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="ucus_guncelle_txtUcusNo" layoutX="11.0" layoutY="29.0" prefHeight="27.0" prefWidth="213.0" promptText="Uçuş No:" />
+                              <TextField fx:id="ucus_guncelle_txtNerden" layoutX="11.0" layoutY="69.0" prefHeight="27.0" prefWidth="213.0" promptText="Nerden:" />
+                              <TextField fx:id="ucus_guncelle_txtNereye" layoutX="11.0" layoutY="109.0" prefHeight="27.0" prefWidth="213.0" promptText="Nereye:" />
+                              <TextField fx:id="ucus_guncelle_txtFiyat" layoutX="10.0" layoutY="149.0" prefHeight="27.0" prefWidth="213.0" promptText="Fiyat:" />
+                              <Button fx:id="ucus_guncelle_BtnGuncelle" layoutX="100.0" layoutY="347.0" mnemonicParsing="false" onAction="#guncelle_tiklandi" prefHeight="27.0" prefWidth="124.0" text="GÜNCELLE" textFill="#26a69a">
+                                 <font>
+                                    <Font name="Cambria Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Text layoutX="14.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Güncellemek istediğiniz uçuşun tabloda seçili olduğundan emin olunuz." wrappingWidth="200.068359375" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Cambria Bold" size="13.0" />
+                     </font>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="271.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #A7FFEB;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <TableView fx:id="table_flies" onContextMenuRequested="#context_menu_clicked" onMouseClicked="#table_tiklandi" prefHeight="480.0" prefWidth="430.0">
+              <columns>
+                <TableColumn id="row_ucusNo" fx:id="col_ucusNo" prefWidth="70.0" resizable="false" text="Uçuş No" />
+                <TableColumn id="row_nerden" fx:id="col_Nerden" prefWidth="130.0" resizable="false" text="Nerden" />
+                  <TableColumn id="row_nereye" fx:id="col_Nereye" prefWidth="130.0" resizable="false" text="Nereye" />
+                  <TableColumn id="row_fiyat" fx:id="col_Fiyat" minWidth="0.0" prefWidth="100.0" resizable="false" text="Fiyat" />
+              </columns>
+               <contextMenu>
+                  <ContextMenu fx:id="context_menu">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#sil_basildi" text="SİL" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
